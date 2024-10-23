@@ -1,0 +1,39 @@
+@font-face{
+    font-family: 'inter', sans-serif;
+    src: url(./fonts.css);
+    font-weight:700;
+}
+
+
+section.breaking.news .breaking-news-item{
+border: 1px solid gray;
+}
+
+section.breaking.news .breaking-news-item div:first-child{
+    background-color: blue;
+}
+
+section.latest-news div{
+flex: 1 1 0%;
+}
+section.latest-news div:first-child{
+    flex: 2 1 0%;
+    }
+
+
+@media screen and (min-width:758px){
+
+}
+@media screen and (min-width:1024px){
+    section.latest-news{
+        flex-direction: row;
+    }
+
+}
+@media screen and (min-width:1024px){
+    section .latest-news{
+        flex-direction: row;
+    }
+
+}
+

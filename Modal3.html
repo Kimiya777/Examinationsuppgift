@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+.flex-gallery{
+    display: flex;
+    justify-content: space-between;
+    max-width: 98%;
+}
+    </style>
+</head>
+<body>
+    <img class="myImages" id="myImg" src="http://onebigphoto.com/uploads/2012/10/midnight-sun-in-lofoten-norway.jpg" alt="Midnight sun in Lofoten, Norway" width="300" height="200">
+<img class="myImages" id="myImg" src="http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1490029386/fisherman-cabin-hamnoy-lofoten-islands-norway-NORWAY0320.jpg?itok=cpPuUjh1" alt="Fishermen's cabins in Lofoten, Norway"
+width="300" height="200">
+<img class="myImages" id="myImg" src="http://fjordtours.blob.core.windows.net/fjordtours-umbraco/1199/gerirangerfjord-per-ottar-walderhaug-fjordnorway.jpg" alt="Gerirangerfjord, Norway" width="300" height="200">
+
+
+
+>
+<container class="flex-gallery">
+
+<div class="row"> 
+    <div class="column">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\Boom1.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\Boom2.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\Boom3.webp" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\Boom4.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\Boom5.webp" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\Boom6.webp" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\Boom7.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\ozora1.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\ozora2.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\ozora3.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\ozora4.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\ozora5.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\ozora6.jpg" style="width:100%">
+    </div>  
+    <div class="column">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem1.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem2.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem3.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem4.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem5.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem6.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
+      <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
+    </div>
+  </div>
+
+
+
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+</container>
+<script>
+    // create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+</body>
+</html>

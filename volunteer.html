@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsyFinder</title>
+    <link rel="stylesheet" href="./CSS/volunteer.css">
+    <link rel="stylesheet" href="./CSS/output.css">
+    <link rel="icon" href="./Images/icon1.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+
+    </style>
+</head>
+<body background="./Images/background-image11.gif">
+
+    <div class="nav-container">
+        <div class="container2">
+             <div class="logo-container"> 
+                <a href="./index.html">
+                <div class="logo-img"><img class="logo" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\logo5.png">
+                </div>
+    
+             <h2>Psyfinder</h2>
+             </a>
+            </div>
+                   <nav class="navbar1">
+                       <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\History.html">History</a>
+                       <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\Gallery.html">Festival Gallery</a>
+                       <a href="Map">Festival Map</a>
+                       <a class="active-page" href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\volunteer.html">Volunteer</a>
+                   </nav>
+        </div>
+    </div>
+
+<div class="container">
+    
+    <div class="form-container">
+    
+
+    <div id="contact-form">
+        <h1>Volunteering Application: </h1>
+        <div class="underline">
+        </div>
+        <form id="contact_form" action="mailto:example@example.com" method="post" enctype="text/plain" onsubmit="myFunction()">
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" placeholder="Full Name:" name="name" id="name_input" required>
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            <input type="email" placeholder="E-mail:" name="email" id="email_input" required>
+          </div>
+          <div class="telephone">
+            <label for="name"></label>
+            <input type="text" placeholder="Phone Number:" name="telephone" id="telephone_input" required>
+          </div>
+          
+          <div class="subject">
+            <label for="subject"></label>
+            <select placeholder="Subject line" name="volunteering for" id="subject_input" required>
+              <option disabled hidden selected>Choose Festival:</option>
+              <option>Boom Festival</option>
+              <option>Ozora Festival</option>
+              <option>Modem Festival</option>
+              <option>Psy-Fi Festival</option>
+              <option>Shankra Festival (Switzerland)</option>
+              <option>Shankra Festival (Sri Lanka)</option>
+              <option>Universo Paralello Festival (Brazil)</option>
+              <option>Universo Paralello Festival (Israel)</option>
+            </select>
+          </div>
+          <div class="message">
+            <label for="message"></label>
+            <textarea name="message" placeholder="Message:" id="message_input" cols="30" rows="5" required></textarea>
+          </div>
+          <div>
+            <label for="checkboxfield">Accept terms and conditions:
+                <input type="checkbox" placeholder="Accept terms and conditions:" id="checkboxfield" name="checkbox" required>
+            </label>
+        </div>
+          <div class="submit">
+            <input type="submit" value="Send Application" id="form_button" />
+          </div>
+          
+        </form>
+      </div>
+
+    </form>
+    
+    </div>
+
+
+        
+    <div>
+        <footer class="footer">
+            <hr style="width: 70vh;">
+            <p>Author: Kimiya Masteri</p>
+            <p><a href="mailto:Kimiya.masterifarhani@gmail.com">Kimiya.masterifarhani@gmail.com</a><svg xmlns="http://www.w3.org/2000/svg" margin-left: 2px; height="12" width="12" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></p>
+        </footer>
+    </div>
+</div>
+
+<script>
+function myFunction() {
+  alert("Thanks for sending your Application!");
+}
+</script>
+
+</body>    
+</html>
