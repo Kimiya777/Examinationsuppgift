@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PsyFinder</title>
-    <link rel="stylesheet" href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\CSS\Main.css">
-    <link rel="icon" href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\icon1.ico">
+    <link rel="stylesheet" href="./CSS/index.css">
+    
+    <link rel="icon" href="./Images/icon1.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
 <style>
 
 
     </style>
 </head>
-<body background="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\background-image11.gif">
+<body background="./Images/background-image11.gif">
 
 
 
@@ -25,29 +29,39 @@
 <div class="nav-container">
     <div class="container2">
          <div class="logo-container"> 
-            <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\Main.html">
-            <div class="logo-img"><img class="logo" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\logo5.png">
+            <a href="./index.html">
+            <div class="logo-img"><img class="logo" src="./Images/logo5.png">
             </div>
 
          <h2>Psyfinder</h2>
          </a>
         </div>
-               <nav class="navbar1">
-                   <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\History.html">History</a>
-                   <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\Gallery.html">Festival Gallery</a>
-                   <a href="Map">Festival Map</a>
-                   <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\volunteer.html">Volunteer</a>
+               <nav class="navbar1 oxanium-link">
+                   <a href="./History.html">History</a>
+                   <a href="./Gallery.html">Festival Gallery</a>
+                   <a href="./Festival-map.html">Festival Map</a>
+                   <a href="./volunteer.html">Volunteer</a>
                </nav>
+               <div class="hamburger-nav" id="myHamburger-nav">
+                <a href="javascript:void(0);" onclick="myFunction2()" class="active">Menu</a>
+                <a href="./History.html">History</a>
+                <a href="./Gallery.html">Festival Gallery</a>
+                <a href="./Festival-map.html">Festival Map</a>
+                <a href="./volunteer.html">Volunteer</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="10.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                </a>
+              </div>
     </div>
 </div>
 <container class="container">
     <h1 class="header1">Welcome to Psyfinder!</br>
         Find psytrance festivals around the world
     </h1>
-    <img style="display: flex; height: calc(40vh - 4vh); width: calc(auto - 20vw); max-height: 40vh; margin-top: 5vh;  animation-name: fadeIn;
-    animation-duration: 6s;" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\welcome8.jpg">
+    <img style="display: flex; height: auto; width: calc(40% + 12vh); max-height: 40vh; margin-top: 5vh;  animation-name: fadeIn;
+    animation-duration: 6s;" src="./Images/welcome8.jpg">
     <div class="welcome-text">
-        <p>
+        <p class="oxanium-light">
         Here you can learn about the history of Psytrance festivals and find your nearest psytrance festivals.
         </br>We regularly update our websites with the latest information from the psytrance world like ticket sales, date/location changes, canceled festivals, new upcoming festivals etc..
     </br>
@@ -64,7 +78,14 @@
 </container>
 
 <script>
-   
+   function myFunction() {
+  var x = document.getElementById("myHamburger-nav");
+  if (x.className === "hamburger-nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "hamburger-nav";
+  }
+}
   var page = window.location.pathname;
   var elements = document.getElementsByClassname("nav-link");
   if (page == "/index/"){

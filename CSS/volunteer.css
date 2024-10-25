@@ -1,6 +1,5 @@
-
 body {
-    background-image:"C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\background-image10.gif";
+    background-image:url("./../Images/background-image11.gif");
     background-repeat:repeat;
     box-sizing: border-box;
     margin: 0;
@@ -9,15 +8,17 @@ body {
     justify-content: center;
 
   }
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
-  
+  @font-face {
+    font-family: "Oxanium", sans-serif;
+    src: url("./../fonts/Oxanium/static/Oxanium-Regular.ttf") format('ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
   .kablammo {
     font-family: "Kablammo", system-ui;
     font-optical-sizing: auto;
@@ -38,7 +39,28 @@ body {
     font-weight: 700;
     font-style: normal;
   }
+  .oxanium-regular {
+    font-family: "Oxanium", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
   
+  .oxanium-bold {
+    font-family: "Oxaniium", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .oxanium-link {
+    font-family: "Oxanium", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  p{
+    font-family: "Oxanium", sans-serif;
+    color: white;
+  }
   .navbar1{
      width: 50vw;
      height: 6vh;
@@ -52,7 +74,7 @@ body {
      flex-direction: row;
      margin-top: 1vw;  
      max-height: 100%;
-     font-size: calc(0.1vw + 1.3vw);
+     font-size: calc(0.5vh + 1vw);
   }
 .container{
     display: flex;
@@ -73,7 +95,7 @@ body {
     align-self: center;
     min-width: 80vw;
     margin-left: auto;
-    margin-top: 25vh;
+    padding-top: calc(8vh + 7vw);
     overflow: hidden;
    
    
@@ -82,10 +104,8 @@ body {
     display: flex;
     position: fixed;
     justify-content: space-between;
-    background-color: rgb(0, 0, 0, 98%);
-    width: 100vw;
+    background-color: rgb(0 0 0 / 98%);
     top:0;
-    max-height: 25vh;
     margin: 0 auto;
     border-radius: 20px;
     align-self: center;
@@ -98,24 +118,25 @@ body {
     margin-left: auto;
     margin-top: 0;
     overflow: hidden;
-    margin-bottom: 5vh;
+    margin-bottom: 4.5vh;
     flex-flow: stretch;
+    align-items: center;
 }
 .container2{
     display: flex;
     flex-direction: row;
-    margin-top: 5vh;
+    margin-top: calc(2.5vh + 1.5vw);
     max-width: 100%;
     justify-content: space-between;
     gap: 20%;
     width: 100%;
+    padding-bottom: calc(2vw - 10vw);
 }
-  
 a{
     color: white;
-    text-decoration: none; 
-    
+    text-decoration: none;   
 }
+
 a.navbar1{
     font-size: calc(1em - 4vh);
 
@@ -136,10 +157,83 @@ a:active {
     text-decoration: underline white;
     text-underline-offset: 0.5rem;
 }
+.hamburger-nav {
+    overflow: hidden;
+  }
+  
+  .hamburger-nav a {
+    
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 5px 9px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .hamburger-nav a:hover {
+    background-color: #ddd;
+    color: grey;
+  }
+  
+  .hamburger-nav a.active {
+    background-color: black;
+    color: white;
+  }
+  
+  .hamburger-nav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .hamburger-nav a:not(:first-child) {display: none;}
+    .hamburger-nav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .hamburger-nav.responsive {position: relative;}
+    .hamburger-nav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .hamburger-nav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+  .navbar1{
+  display: none;
+
+  }
+  .container2{
+    margin-top: 0;
+    
+}
+.logo-img{
+    padding-top: 20%;
+
+}
+.logo-container{
+    max-width: 40vw;
+}
+  }
+
+  @media only screen and (min-width: 481px) {
+  .hamburger-nav{
+  display: none!important; 
+  }
+  }
 .logo{
     display: flex;
     margin-left: 10%;
-    height: 4.2vw;
+    height: calc(4vh + 2vw);
     
 }
 .logo-container{
@@ -148,18 +242,19 @@ a:active {
     align-items: center;
     max-width: 20vw;
     flex-direction: column;
-    align-self: flex-start;
+    align-self: center;
 }
 .logo-img{
     display: flex;
     flex-direction: row;
-    max-width: 20vw;
+    max-width: 100%;
     justify-content: center;
     align-items: center;
+    
 }
 h2{
     color: white;
-    font-size: calc(0.5em + 1vw);
+    font-size: calc(0.2em + 2vw);
     font-family: "Kablammo", system-ui;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -170,13 +265,74 @@ h2{
     margin-top: 0; 
 
 }
-
+.header1{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: "Agdasima", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    word-wrap: break-word;
+    text-align: center;
+    max-width: 100%;
+    font-size: calc(1.5em + 1vw);
+    animation-name: fadeIn;
+    animation-duration: 6s;
+    box-sizing: content-box;
+    
+}
+.header2{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: "Agdasima", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    word-wrap: break-word;
+    text-align: center;
+    max-width: 100%;
+    font-size: calc(1.5em + 1vw);
+    margin-top: 5%;
+    animation-name: fadeIn;
+    animation-duration: 6s;
+    text-align: left;
+}
+.welcome-text{
+    width: 40%;
+    color: white;
+    margin-top: 8vh;
+    margin-bottom: 10vh;
+}
+@media screen and (max-width: 600px) {
+    .welcome-text{
+       width: 90%;
+    }
+    .container .container2 .nav-container{
+        width: 99%;
+    }
+}
 .footer{
     
     text-align: center;
     color:white;
     margin-top: 10%;
     margin-bottom:10%;
+    font-size:0.7em;
+}
+svg {
+    margin-left: 1vw !important;
+
+    }
+label{
+    color: white;
+}
+.contact-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 label{
     color: white;
@@ -225,7 +381,7 @@ textarea {
   border: solid 3px white;
   max-width: 768px;
   margin: 60px auto;
-  position: relative;
+
   border-radius: 2%;
 }
 

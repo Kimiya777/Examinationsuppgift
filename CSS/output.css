@@ -1,12 +1,4 @@
-body {
-  background-image:"C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\background-image10.gif";
-  background-repeat:repeat;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
+
 
 *, ::before, ::after {
   --tw-border-spacing-x:0;
@@ -180,7 +172,7 @@ html,
 */
 
 body {
-  margin: 0;
+  
   /* 1 */
   line-height: inherit;
   /* 2 */
@@ -214,24 +206,13 @@ abbr:where([title]) {
 Remove the default font size and weight for headings.
 */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
+
 
 /*
 Reset links to optimize for opt-in styling instead of opt-out.
 */
 
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
+
 
 /*
 Add the correct font weight in Edge and Safari.
@@ -442,21 +423,7 @@ summary {
 Removes the default spacing and border for appropriate elements.
 */
 
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
-  margin: 0;
-}
+
 
 fieldset {
   margin: 0;
@@ -534,29 +501,12 @@ Make sure disabled buttons don't get the pointer cursor.
    This can trigger a poorly considered lint error in some tools but is included by design.
 */
 
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block;
-  /* 1 */
-  vertical-align: middle;
-  /* 2 */
-}
+
 
 /*
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
 
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
 
@@ -577,6 +527,15 @@ video {
 @media (min-width: 768px) {
   .container {
     max-width:768px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -637,7 +596,9 @@ video {
 .flex-row-reverse {
   flex-direction:row-reverse;
 }
-
+.flex-col{
+  flex-direction: column;
+}
 .flex-wrap {
   flex-wrap:wrap;
 }
@@ -645,11 +606,39 @@ video {
 .p-2 {
   padding:0.5rem;
 }
-
+.gap-10{
+  gap:10%;
+}
+.align-center{
+  align-items: center;
+}
 .underline {
   text-decoration-line:underline;
 }
-
+.max-w-full{
+  max-width:100%;
+}
+.max-w-half{
+  max-width:50%;
+}
+.w-half{
+  width:50%;
+}
+.max-w-92{
+  max-width: 92%;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.m-auto{
+  margin:auto;
+}
+.mt-30{
+  margin-top: 30px;
+}
+.p-15px{
+  padding:15px;
+}
 .transition {
   transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -723,7 +712,7 @@ video {
   align-self: center;
   min-width: 80vw;
   margin-left: auto;
-  margin-top: 25vh;
+  padding-top: 25vh;
   overflow: hidden;
 }
 
@@ -734,7 +723,7 @@ video {
   background-color: rgb(0, 0, 0, 98%);
   width: 100vw;
   top:0;
-  max-height: 25vh;
+  
   margin: 0 auto;
   border-radius: 20px;
   align-self: center;

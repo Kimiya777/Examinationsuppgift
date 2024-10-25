@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PsyFinder</title>
-    <link rel="stylesheet" href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\CSS\Main.css">
-    <link rel="icon" href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\icon1.ico">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="icon" href="./Images/icon1.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
 <style>
 
 #myImg {
@@ -26,25 +29,16 @@
 
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/ opacity */
 }
 
 .modal-content {
@@ -112,7 +106,6 @@
 
 body {
   margin: 0;
-  font-family: Arial;
 }
 
 .header {
@@ -121,16 +114,16 @@ body {
 }
 
 .row {
-  display: -ms-flexbox; /* IE10 */
+  display: -ms-flexbox; 
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap; 
   flex-wrap: wrap;
   padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
+
 .column {
-  -ms-flex: 25%; /* IE10 */
+  -ms-flex: 25%; 
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
@@ -142,7 +135,6 @@ body {
   width: 100%;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
     -ms-flex: 50%;
@@ -151,7 +143,6 @@ body {
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
     -ms-flex: 100%;
@@ -167,67 +158,119 @@ body {
 }
     </style>
 </head>
-<body background="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\background-image11.gif">
+<body background="./Images/background-image11.gif">
 
 
   <div class="nav-container">
     <div class="container2">
          <div class="logo-container"> 
-            <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\Main.html">
-            <div class="logo-img"><img class="logo" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\logo5.png">
+            <a href="./index.html">
+            <div class="logo-img"><img class="logo" src="./Images/logo5.png">
             </div>
 
          <h2>Psyfinder</h2>
          </a>
         </div>
-               <nav class="navbar1">
-                   <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\History.html">History</a>
-                   <a class="active-page" href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\Gallery.html">Festival Gallery</a>
-                   <a href="Map">Festival Map</a>
-                   <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\volunteer.html">Volunteer</a>
+               <nav class="navbar1 oxanium-link">
+                   <a href="./History.html">History</a>
+                   <a class="active-page" href="./Gallery.html">Festival Gallery</a>
+                   <a href="./Festival-map.html">Festival Map</a>
+                   <a href="./volunteer.html">Volunteer</a>
                </nav>
+               <div class="hamburger-nav" id="myHamburger-nav">
+                <a href="javascript:void(0);" onclick="myFunction2()" class="active">Menu</a>
+                <a href="./History.html">History</a>
+                <a href="./Gallery.html">Festival Gallery</a>
+                <a href="./Festival-map.html">Festival Map</a>
+                <a href="./volunteer.html">Volunteer</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="12" width="10.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                </a>
+              </div>
     </div>
 </div>
 
 <div class="container">
-    
+    <h1 class="header1">Click on an image to see where the festival is located</h1>
 
     <container class="flex-gallery">
 
         <div class="row"> 
             <div class="column">
-              <img class="myImages" id="myImg" src="./Images\Boom1.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\Boom2.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\Boom3.webp" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\Boom4.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\Boom5.webp" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\Boom6.webp" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\Boom7.jpg" style="width:100%">
+              <img class="myImages" id="myImg" src="./Images/modem1.jpg" style="width:100%" alt="Mo:Dem Festival(Croatia)">
+              <img class="myImages" id="myImg" src="./Images/universo5.jpeg" style="width:100%" alt="Universo Paralello Festival (Brazil)">
+              <img class="myImages" id="myImg" src="./Images/Boom3.webp" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/ozora10.webp" style="width:100%" alt="Ozora Festival (Hungary)">
+              <img class="myImages" id="myImg" src="./Images/zna2.jpg" style="width:100%" alt="ZNA Gathering (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/boom19.webp" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/Boom7.jpg" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/modem9.jpg" style="width:100%" alt="Mo:Dem Festival(Croatia)">
+              <img class="myImages" id="myImg" src="./Images/modem12.jpg" style="width:100%" alt="Mo:Dem Festival(Croatia)">
+              <img class="myImages" id="myImg" src="./Images/shankra11.jpg" style="width:100%" alt="Shankra Festival (Switzerland)">
+              <img class="myImages" id="myImg" src="./Images/universo10.jpg" style="width:100%" alt="Universo Paralello Festival">
+              <img class="myImages" id="myImg" src="./Images/zna5.jpg" style="width:100%" alt="ZNA Gathering (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/ozora5.jpg" style="width:100%" alt="Ozora Festival (Hungary)">
+              <img class="myImages" id="myImg" src="./Images/modem10.jpg" style="width:100%" alt="Mo:Dem Festival(Croatia)">
+              <img class="myImages" id="myImg" src="./Images/boom16.webp" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/psy-fi6.jpg" style="width:100%" alt="Psy-Fi Festival (Netherlands)">
+              <img class="myImages" id="myImg" src="./Images/universo11.jpg" style="width:100%" alt="Universo Paralello Festival">
             </div>
             <div class="column">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\ozora1.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\ozora2.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\ozora3.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\ozora4.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\ozora5.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\ozora6.jpg" style="width:100%">
+              <img class="myImages" id="myImg" src="./Images/ozora1.jpg" style="width:100%" alt="Ozora Festival (Hungary)">
+              <img class="myImages" id="myImg" src="./Images/modem2.jpg" style="width:100%" alt="Mo:Dem Festival(Croatia)">
+              <img class="myImages" id="myImg" src="./Images/ozora3.jpg" style="width:100%" alt="Ozora Festival (Hungary)">
+              <img class="myImages" id="myImg" src="./Images/psy-fi10.jpg" style="width:100%" alt="Psy-Fi Festival (Netherlands)">
+              <img class="myImages" id="myImg" src="./Images/ozora4.jpg" style="width:100%" alt="Ozora Festival (Hungary)">
+              <img class="myImages" id="myImg" src="./Images/ozora6.jpg" style="width:100%" alt="Ozora Festival (Hungary)">
+              <img class="myImages" id="myImg" src="./Images/zna.jpg" style="width:100%" alt="ZNA Gathering (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/zna2.jpg" style="width:100%" alt="ZNA Gathering (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/universo6.jpg" style="width:100%" alt="Universo Paralello Festival">
+              <img class="myImages" id="myImg" src="./Images/shankra1.jpg" style="width:100%" alt="Shankra Festival (Switzerland)">
+              <img class="myImages" id="myImg" src="./Images/universo1.jpg" style="width:100%" alt="Universo Paralello Festival">
+              <img class="myImages" id="myImg" src="./Images/boom20.jpg" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/Boom12.png" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/Boom10.JPG" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/ozora9.jpg" style="width:100%" alt="Ozora Festival (Hungary)">
+              <img class="myImages" id="myImg" src="./Images/modem5.jpg" style="width:100%" alt="Mo:Dem Festival(Croatia)">
             </div>  
             <div class="column">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem1.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem2.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem3.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem4.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem5.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem6.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
+              <img class="myImages" id="myImg" src="./Images/Boom2.jpg" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/Boom1.jpg" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/modem3.jpg" style="width:100%" alt="Mo:Dem Festival(Croatia)">
+              <img class="myImages" id="myImg" src="./Images/modem11.jpg" style="width:100%" alt="Mo:Dem Festival(Croatia)">
+              <img class="myImages" id="myImg" src="./Images/zna7.jpg" style="width:100%" alt="ZNA Gathering (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/universo7.jpg" style="width:100%" alt="Universo Paralello Festival">
+              <img class="myImages" id="myImg" src="./Images/zna4.jpg" style="width:100%" alt="ZNA Gathering (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/universo4.jpg" style="width:100%" alt="Universo Paralello Festival">
+              <img class="myImages" id="myImg" src="./Images/ozora5.jpg" style="width:100%" alt="Ozora Festival (Hungary)">
+              <img class="myImages" id="myImg" src="./Images/shankra7.jpg" style="width:100%" alt="Shankra Festival (Switzerland)">
+              <img class="myImages" id="myImg" src="./Images/psy-fi8.jpg" style="width:100%" alt="Psy-Fi Festival (Netherlands)">
+              <img class="myImages" id="myImg" src="./Images/ozora17.jpg" style="width:100%" alt="Ozora Festival (Hungary)">
+              <img class="myImages" id="myImg" src="./Images/Boom14.jpg" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/Boom6.webp" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/boom18.jpg" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/psy-fi2.jpg" style="width:100%" alt="Psy-Fi Festival (Netherlands)">
+              <img class="myImages" id="myImg" src="./Images/shankra4.jpg" style="width:100%" alt="Shankra Festival (Switzerland)">
+              
             </div>
             <div class="column">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
-              <img class="myImages" id="myImg" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\modem7.jpg" style="width:100%">
+              <img class="myImages" id="myImg" src="./Images/zna3.jpg" style="width:100%" alt="ZNA Gathering (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/boom17.jpg" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/shankra9.jpg" style="width:100%" alt="Shankra Festival (Switzerland)">
+              <img class="myImages" id="myImg" src="./Images/Boom4.jpg" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/ozora13.jpg" style="width:100%" alt="Ozora Festival (Hungary)">
+              <img class="myImages" id="myImg" src="./Images/zna6.jpg" style="width:100%" alt="ZNA Gathering (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/universo9.jpg" style="width:100%" alt="Universo Paralello Festival">
+              <img class="myImages" id="myImg" src="./Images/ozora15.jpg" style="width:100%" alt="Ozora Festival (Hungary)">
+              <img class="myImages" id="myImg" src="./Images/psy-fi9.webp" style="width:100%" alt="Psy-Fi Festival (Netherlands)">
+              <img class="myImages" id="myImg" src="./Images/ozora11.jpg" style="width:100%" alt="Ozora Festival (Hungary)">
+              <img class="myImages" id="myImg" src="./Images/shankra6.jpg" style="width:100%" alt="Shankra Festival (Switzerland)">
+              <img class="myImages" id="myImg" src="./Images/boom15.webp" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/Boom11.jpg" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/Boom8.jpg" style="width:100%" alt="Boom Festival (Portugal)">
+              <img class="myImages" id="myImg" src="./Images/modem8.jpg" style="width:100%" alt="Mo:Dem Festival(Croatia)">
+              <img class="myImages" id="myImg" src="./Images/modem7.jpg" style="width:100%" alt="Mo:Dem Festival(Croatia)">
+              
             </div>
           </div>
         
@@ -249,7 +292,14 @@ body {
         </footer>
 </div>
 <script>
-  
+  function myFunction() {
+  var x = document.getElementById("myHamburger-nav");
+  if (x.className === "hamburger-nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "hamburger-nav";
+  }
+}
      // create references to the modal...
 var modal = document.getElementById('myModal');
 // to all images -- note I'm using a class!

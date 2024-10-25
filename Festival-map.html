@@ -4,21 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PsyFinder</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\CSS\Main.css">
-    <link rel="icon" href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\icon1.ico">
+    
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="icon" href="./Images/icon1.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
 <style>
-
+ .flex-map{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 5%;
+            align-items: center;
+            width: 48%;
+            max-width: 48%;
+        }
+        .flex-map2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 5%;
+            align-items: center;
+            width: 48%;
+            max-width: 48%;
+           
+        }
+        .map-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 5px;
+            width:96%;
+            max-width: 96%;
+            margin-top: calc(2.5vh + 2.5vw);
+            align-items: center;
+        }
+        h3{
+            color:white;
+            padding: 5%;
+            font-size: calc(0.5em + 1vw);
+        }
+        @media screen and (max-width:850px) {
+          .map-container{
+            flex-direction: column;
+            
+          }
+          iframe{
+            width: calc(222.5px + 2.5vw)
+          }
+        }
+        @media screen and (max-width:900px) {
+          iframe{
+            width: calc(222.5px + 2.5vw)
+          }
+        }
 
     </style>
 </head>
-<body background="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\background-image11.gif">
+<body background="./Images/background-image11.gif">
 
 
 
@@ -26,32 +76,54 @@
 <div class="nav-container">
     <div class="container2">
          <div class="logo-container"> 
-            <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\Main.html">
-            <div class="logo-img"><img class="logo" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\logo5.png">
+            <a href="./index.html">
+            <div class="logo-img"><img class="logo" src="./Images/logo5.png">
             </div>
 
          <h2>Psyfinder</h2>
          </a>
         </div>
-               <nav class="navbar1">
-                   <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\History.html">History</a>
-                   <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\Gallery.html">Festival Gallery</a>
-                   <a href="Map">Festival Map</a>
-                   <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\volunteer.html">Volunteer</a>
+               <nav class="navbar1 oxanium-link">
+                   <a href="./History.html">History</a>
+                   <a href="./Gallery.html">Festival Gallery</a>
+                   <a class="active-page" href="Festival-map.html">Festival Map</a>
+                   <a href="./volunteer.html">Volunteer</a>
                </nav>
+               <div class="hamburger-nav" id="myHamburger-nav">
+                <a href="javascript:void(0);" onclick="myFunction2()" class="active">Menu</a>
+                <a href="./History.html">History</a>
+                <a href="./Gallery.html">Festival Gallery</a>
+                <a href="./Festival-map.html">Festival Map</a>
+                <a href="./volunteer.html">Volunteer</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="12" width="10.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                </a>
+              </div>
     </div>
 </div>
 <container class="container">
-    <div class
-    <div class="d-flex flex-row">
-        <div class="p-2">Flex item 1</div>
-        <div class="p-2">Flex item 2</div>
-      </div>
-      <div class="d-flex flex-row-reverse">
-        <div class="p-2">Flex item 1</div>
-        <div class="p-2">Flex item 2</div>
-        
-      </div>
+    
+    
+      <h1 class="header1">Top 6 Festivals Map:</h1>
+      <section class="map-container">
+        <div class="flex-map">
+            <h3>Boom festival:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50098683.92024452!2d-81.01006850000006!3d39.96864879999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3d711b03fff0af%3A0x33d9890372a73829!2sBoom%20Festival!5e0!3m2!1ssv!2sse!4v1729755659169!5m2!1ssv!2sse" width="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h3>Ozora Festival:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50098683.92024452!2d-81.01006850000006!3d39.96864879999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4742773d4255c1d3%3A0xe1c39b3b2ae39faf!2sO.Z.O.R.A.%20Festival%20Mirador!5e0!3m2!1ssv!2sse!4v1729755740296!5m2!1ssv!2sse" width="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h3>Mo:Dem Festival:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50098683.92024452!2d-81.01006850000006!3d39.96864879999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476407db7ad446f1%3A0xd31a3ac47bea4176!2sMo%3ADem%20Festival!5e0!3m2!1ssv!2sse!4v1729755757493!5m2!1ssv!2sse" width="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="flex-map2">
+        <h3>Universo Paralello Festival:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63501608.696327664!2d-112.8216545!3d-13.728703199999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x73ef33ca085ad1b%3A0xe5ba384c75002413!2s303%20Stage%20-%20Universo%20Paralello!5e0!3m2!1ssv!2sse!4v1729755778032!5m2!1ssv!2sse" width="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h3>Shankra Festival:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45161164.002339214!2d-64.6351195!3d46.30152149999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47845b5c42fab15f%3A0x4c4c6b80bd29cc8!2sShankra%20Festival!5e0!3m2!1ssv!2sse!4v1729755806484!5m2!1ssv!2sse" width="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h3>Psy-Fi Festival:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45161164.002339214!2d-64.6351195!3d46.30152149999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b81169b4107989%3A0xef347992bce4dcbc!2sRecreatiepark%20Het%20Hulsbeek!5e0!3m2!1ssv!2sse!4v1729755865467!5m2!1ssv!2sse" width="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <h3>Here is a link for a festival map list to see more festivals around the world: </br><a href="https://maps.app.goo.gl/MaL43Re16NHXDTmy6" alt="Festival map list">https://maps.app.goo.gl/MaL43Re16NHXDTmy6</a></h3>
         <footer class="footer">
             <hr style="width: 70vh;">
             <p>Author: Kimiya Masteri</p>
@@ -60,7 +132,14 @@
 </container>
 
 <script>
-   
+   function myFunction() {
+  var x = document.getElementById("myHamburger-nav");
+  if (x.className === "hamburger-nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "hamburger-nav";
+  }
+}
   var page = window.location.pathname;
   var elements = document.getElementsByClassname("nav-link");
   if (page == "/index/"){

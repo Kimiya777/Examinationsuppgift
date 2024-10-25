@@ -14,6 +14,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
 <style>
 
 
@@ -28,34 +31,57 @@
     <div class="container2">
          <div class="logo-container"> 
             <a href="./index.html">
-            <div class="logo-img"><img class="logo" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\logo5.png">
+            <div class="logo-img"><img class="logo" src="./Images/logo5.png">
             </div>
 
          <h2>Psyfinder</h2>
          </a>
         </div>
-               <nav class="navbar1">
-                   <a class="active-page" href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\History.html">History</a>
-                   <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\Gallery.html">Festival Gallery</a>
-                   <a href="Map">Festival Map</a>
-                   <a href="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\HTML\volunteer.html">Volunteer</a>
+               <nav class="navbar1 oxanium-link">
+                   <a class="active-page" href="./History.html">History</a>
+                   <a href="./Gallery.html">Festival Gallery</a>
+                   <a href="./Festival-map.html">Festival Map</a>
+                   <a href="./volunteer.html">Volunteer</a>
                </nav>
+               <div class="hamburger-nav" id="myHamburger-nav">
+                <a href="javascript:void(0);" onclick="myFunction2()" class="active">Menu</a>
+                <a href="./History.html">History</a>
+                <a href="./Gallery.html">Festival Gallery</a>
+                <a href="./Festival-map.html">Festival Map</a>
+                <a href="./volunteer.html">Volunteer</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="10.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                </a>
+              </div>
     </div>
 </div>
 <container class="container">
     <h1 class="header2">History Of Psytrance Culture:</br>
+        <p style="font-size:0.2em">(Stylad med tailwind output fil)</p>
     </h1>
-    <img style="display: flex; height: calc(40vh - 4vh); width: calc(auto - 20vw); max-height: 40vh; margin-top: 5vh;  animation-name: fadeIn;
-    animation-duration: 6s;" src="C:\Users\Pia Masteri\Desktop\HTML-CSS\Examinationsuppgift\Images\welcome8.jpg">
-    <div class="welcome-text">
-        <p>
-        Here you can learn about the history of Psytrance festivals and find your nearest psytrance festivals.
-        </br>We regularly update our websites with the latest information from the psytrance world like ticket sales, date/location changes, canceled festivals, new upcoming festivals etc..
-    </br>
-        </br>Since we have a partnership with all the listed festivals on our website you can also send in your volunteering application for your desired festival through us.
-        </br>Make sure to turn on your notifications to not miss any updates!
-        </p>
-        </div>
+    <div class="flex flex-col mt-20 m-auto max-w-98 p-15px align-center" >
+         <section class=" flex flex-col justify-between  align-center max-w-98 p-2 gap-10">
+                
+                     <img src="Images/history1.jpeg" width="70% align-center">
+                 
+                     <p class="oxanium-regular">The first hippies who arrived in Goa, India in the mid-1960s were drawn there for many reasons, including the beaches, the low cost of living, the friendly locals, the Indian religious and spiritual practices and the readily available Indian cannabis, which until the mid-1970s was legal.
+
+                          During the 1970s the first Goa DJs were generally playing psychedelic rock bands such as the Grateful Dead, Pink Floyd and The Doors.</p>
+            
+         </section>
+</br>
+         <section class="flex flex-col justify-between flex-wrap align-center max-w-92 gap-10 mt-20">
+                  
+                       <img src="Images/history2.jpeg" width="80%" margin-bottom="20px">
+                       <p class="oxanium-bold">
+                          In 1979 the beginnings of Electronic Dance Music could occasionally be heard in Goa in the form of tracks by artists such as Kraftwerk but it was not until 1983 that DJs Laurent and Fred Disko, closely followed by Goa Gil, began switching the Goa style over to electro-industrial/EBM.
+                      
+                          The tracks were remixed, removing the lyrics, looping the melodies and beats and generally manipulating the sounds in all manner of ways before the tracks were finally presented to the dancers as custom Goa-style mixes.
+                          
+                          By 1990–91 Goa was no longer under the radar and had become a hot destination for partying. As the scene grew bigger, Goa-style parties spread like a diaspora all over the world from 1993. Parties like Pangaea and Megatripolis in the UK helped spawn a multitude of labels in various countries (U.K. Australia, Japan, Germany) to promote psychedelic electronic music that reflected the ethos of Goa parties, Goa music, and Goa-specific artists, producers, and DJs. 
+                       </p>
+        </section>
+   </div>
 
         <footer class="footer">
             <hr style="width: 70vh;">
@@ -65,7 +91,14 @@
 </container>
 
 <script>
-   
+   function myFunction() {
+  var x = document.getElementById("myHamburger-nav");
+  if (x.className === "hamburger-nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "hamburger-nav";
+  }
+}
   var page = window.location.pathname;
   var elements = document.getElementsByClassname("nav-link");
   if (page == "/index/"){
